@@ -12,10 +12,10 @@ interface NoteProps{
 
 export default function Note({note}: NoteProps){
     const[showEditDialog, setShowEditDialog] = useState(false)
-    const wasUpdated = note.updatedAt > note.createdAt
+    const wasUpdated = note.updatedAt > note.createAt
     
     const createdUpdatedAtTimestamp = (
-        wasUpdated ? note.updatedAt : note.createdAt
+        wasUpdated ? note.updatedAt : note.createAt
     ).toDateString()
 
     return(

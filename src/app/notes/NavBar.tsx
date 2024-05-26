@@ -14,7 +14,7 @@ import { useTheme } from "next-themes"
 
 export default function NavBar() {
     const {theme} = useTheme()
-    const [showEditDialog, setShowEditDialog] = useState(false)
+    const [showAddNoteDialog, setShowAddNoteDialog] = useState(false)
 
     return(
     <>
@@ -38,14 +38,14 @@ export default function NavBar() {
                 }}
                 />
                 <ThemeToggleButton />
-                <Button onClick={()=> setShowEditDialog(true)}>
+                <Button onClick={()=> setShowAddNoteDialog(true)}>
                     <Plus size={20} className="mr-2" />
                     Add Note
                 </Button>
             </div>
         </div>
     </div>
-    <AddNoteDialog open={showEditDialog} setOpen={setShowEditDialog} />
+    <AddNoteDialog open={showAddNoteDialog} setOpen={setShowAddNoteDialog} />
     </>
     )
 }
