@@ -39,8 +39,8 @@ export async function POST (req: Request){
                     metadata: {userId}
                 }
             ])
-            return note
-        })
+            return note;
+        });
 
         
         return Response.json({note},{status:201})
